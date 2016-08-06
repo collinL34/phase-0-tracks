@@ -13,3 +13,5 @@
 
 * What is a merge conflict?
 4.A merge conflict is when two or more coders who are working remotely or one is working remotely on a project that is shared through the same github repository. And they both make the same change on a file, like if it was a txt file and they both typed up or changed the sentence from ('yeah coding') to ('yay coding') when they both try to commit the git will get confused and go wait which change do i actually commit and it shoots out an error message and basically says hey you guys got to decide which one is the actuall change to be commited.
+
+*coding yaay!
