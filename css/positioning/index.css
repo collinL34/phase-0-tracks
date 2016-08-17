@@ -1,0 +1,21 @@
+.octopus {
+  padding-top: 100px;
+  padding-left: 610px;
+  z-index: -1;
+  position: absolute;
+}
+
+.glasses {
+  padding-top: 198px;
+  padding-left: 650px;
+  z-index: 1;
+  position: absolute;
+}
+
+.hat {
+  text-align: center;
+  z-index: 0;
+  padding-top: 40px;
+  padding-left: 590px;
+  position: absolute;
+}
