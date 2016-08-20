@@ -8,13 +8,19 @@ p {
   font-family: Helvetica;
   text-shadow: red 10px 2px;
   padding: 10px;
+  display: inline;
 }
 
 table {
   background-color: blue;
+  display: inline;
   border: dotted;
   border-color: green;
   color: red;
   border-width: 10px;
   text-align: center;
+}
+
+tr {
+  display: inline;
 }
