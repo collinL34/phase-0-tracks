@@ -9,19 +9,19 @@ cite {
   margin-top: 10px;
 }
 
-#external-links {
-  padding-left: 10px;
+#diy {
+  float: right;
   width: 20%;
-  display: inline-block;
-  vertical-align: top;
+}
+
+#diy ul {
+  float: right;
+  width: 5%;
 }
 
 #external-links ul {
-  padding-left: 10px;
-  list-style-type: none;
-  width: 5%;
-  display: inline-block;
-  vertical-align: top;
+ float: left;
+ width: 5%;
 }
 
 body {
@@ -29,10 +29,11 @@ body {
 }
 
 main {
+  float: right;
   width: 75%;
-  display: inline-block;
-  vertical-align: top;
 }
+
+
 
 /* you're welcome to edit the
 image, figure, and figcaption CSS if you'd like,
