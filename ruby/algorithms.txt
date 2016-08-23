@@ -1,0 +1,22 @@
+-For every time you step into elevator.
+	-Turn around and face the opening of the elevator door.
+	-Face the panel in front of the door and see the panel with the buttons.
+ 	-Press one of the buttons that will say a number for the floor you wish go to.
+	-The doors will close.
+	-Stay in the elevator till the number above the door says the number of the floor you want.
+	-Exit the elevator.
+
+Making pizza for lunch
+
+-For pizza thats not hot
+	-Go into kitchen and face the oven.
+	-Press the button that says bake and press the number 425 for the temp.
+	-Wait till the oven makes a noise and shows the number 425 on the screen onto of the oven.
+	-Walk to adjacent wall b that is placed horizontally to the left of the oven.	-Turn back to wall a that is same wall as the oven and see the fridge in front of you.
+	-Open door and grab the long square pizza box and open the box and pull out the pizza.
+	-Move to the horizontally to the right till you face the oven again.
+	-Open the door on the oven and place the pizza in it.
+	-press the time button on the oven ad type in the numbers 17 and press the button start.
+	-When time is up grab the oven mitt next to the oven on the wall place over hand and open the door of the oven.
+	-Grab pizza with hand that oven mitt is on and pull the pizza out of the oven.
+	-And place pizza onto of the oven and eat the pizza.
