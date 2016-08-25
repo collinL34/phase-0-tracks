@@ -1,0 +1,37 @@
+header {
+  background-color: blue;
+  font-family: aerial;
+}
+
+.column-1 {
+  font-family: Helvetica,sans-serif;
+  background-color: yellow;
+  float:left;
+  width: 45%;
+  padding: 10px;
+  height: 1180px;
+  border-style: solid;
+  border-width: 2px;
+  border-color: grey;
+
+}
+.column-2 {
+  font-family: comic sans MS, sans-serif;
+  background-color: purple;
+  float: left;
+  width: 51%;
+  padding: 10px;
+  height: 1180px;
+  border-style: solid;
+  border-width: 2px;
+  border-color: grey;
+}
+
+footer {
+  font-family: aerial;
+  background-color: brown;
+  margin-right: 10px;
+  padding-left: 10px;
+}
+
+
