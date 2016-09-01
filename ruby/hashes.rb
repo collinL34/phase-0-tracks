@@ -45,7 +45,6 @@ until alg == false
     p contractor_info[:allergies].push(allergies)
   if (allergies == 'none' || allergies == 'done')
     alg = false
-    p contractor_info[:allergies].chomp()
   end
   puts 'Thanks for the info.'
 end
@@ -85,7 +84,6 @@ if change.include? 'yes'
             p contractor_info[changes].push(allergie)
               if (allergie == 'none' || allergie == 'done')
                 alg = false
-                p contractor_info[:allergies].chomp()
               end
           end
           puts 'Okay thanks.'
