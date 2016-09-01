@@ -67,11 +67,11 @@ while x > 0
 
     if name == false
        vampire_results = 'Definitely a vampire.'
-    elsif (age == true) && (garlic_bread == true || health == true)
+    elsif age == true && (garlic_bread == true || health == true)
       vampire_results = 'Probably not a vampire.'
-    elsif (age == false) && (garlic_bread == false || health == false)
+    elsif age == false && (garlic_bread == false || health == false)
       vampire_results = 'Probably a vampire.'
-    elsif (age == false) && (garlic_bread == false && health == false)
+    elsif age == false && (garlic_bread == false && health == false)
       vampire_results = 'Almost certainly a vampire.'
     else
       vampire_results = 'Results inconclusive'
