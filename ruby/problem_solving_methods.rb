@@ -34,3 +34,14 @@ def fib(n)
 end
 
 fib(10)
+
+# create a sorting method for an array of integers
+# create one that sorts words in order of smallest word to biggest
+#create a nums_array with random nums that are not in order
+# first def a method called num_sort
+#search for a possible sort_by method
+
+
+nums_array = [1,5,78,3,9,10,89]
+
+nums_array.sort!
