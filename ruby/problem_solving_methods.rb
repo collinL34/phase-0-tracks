@@ -45,3 +45,18 @@ fib(10)
 nums_array = [1,5,78,3,9,10,89]
 
 nums_array.sort!
+
+def sorting(array)
+  num1 = 0
+  num2 = 1
+  while num2 < array.length
+      if num1 > num2
+        array.unshft(num2)
+      end
+      num1 = num1 + 1
+      num2 = num2 + 1
+    end
+    p array
+end
+p nums_array
+sorting(nums_array)
