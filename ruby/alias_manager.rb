@@ -6,7 +6,7 @@
 # and so are constants d => f
 
 
-def secret_name(string) #sam mor
+def secret_name(string) #sam mora
 vowels = ['a','e','i','o','u']
 constants = ['b','c','d','f','g','h','j','k','l','m','n','p','q','r','s','t','v','w','x','y','z']
       word_seperator = string.reverse.chars #arom mas, [a,r,o,m,m,a,s]
