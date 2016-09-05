@@ -9,8 +9,8 @@
 def secret_name(string) #sam mora
 vowels = ['a','e','i','o','u']
 constants = ['b','c','d','f','g','h','j','k','l','m','n','p','q','r','s','t','v','w','x','y','z']
-      word_seperator = string.reverse.chars #aron mas, [a,r,o,n,m,a,s]
-      p word_seperator # [a,r,o,n,m,a,s]
+      word_seperator = string.reverse.chars #arom mas, [a,r,o,m,m,a,s]
+      p word_seperator # [a,r,o,m,m,a,s]
       new_word = word_seperator.map do |char|
         if vowels.include?(char) # vowels.index(a)
           p char.next[vowels.index(char)] #vowels.index(a) => e
