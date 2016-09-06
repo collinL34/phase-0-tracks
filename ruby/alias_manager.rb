@@ -5,17 +5,11 @@
 # vowels are made the next aeiou a => e
 # and so are constants d => f
 
-    loop do
-      puts "Please give me a name, type 'quit' if done."
-      user = gets.chomp
-      if user == 'quit'
-        break
-      end
       def secret(user)
-        new_versions = []
-        old_versions = []
-        old_versions << string
-        word = string.reverse.split('')
+          $new_versions = []
+          $old_versions = []
+        $old_versions << user
+        word = user.reverse.split('')
         vowels = ['a','e','i','o','u']
         constants = ['b','c','d','f','g','h','j','k','l','m','n','p','q','r','s','t','v','w','x','y','z']
           word.map! do |x|
@@ -39,15 +33,36 @@
               x = " "
             end
           end
-            new_versions << word.join('')
+            $new_versions << word.join('')
 
             counter = 0
 
-            while counter < new_versions.length
-              old = old_versions[counter]
-              newer = new_versions[counter]
+            while counter < $new_versions.length
+              old = $old_versions[counter]
+              newer = $new_versions[counter]
                 puts "#{old} is also known as #{newer}."
                 counter = counter + 1
               end
           end
+
+  $count = 0
+    loop do
+      puts "Please give me a name, type 'quit' if done."
+      user = gets.chomp
+      secret(user)
+      $count = $count + 1
+      if user == 'quit'
+        break
       end
+    end
+
+      if $user == 'quit'
+        $counter = 0
+        while $counter < $count
+          p $new_versions
+          p $old_versions
+          puts $old_versions[$counter] + " is also known as " + $new_versions[$counter]
+          $counter = $counter + 1
+        end
+      end
+
