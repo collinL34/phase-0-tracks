@@ -21,7 +21,9 @@ while x > 0
     p 'What year were you born?'
     year = gets.chomp.to_i
     
-    if (Time.now - age) == year
+    user_year = Time.now
+    
+    if (user_year.year - age) == year
         age = true
     else
         age = false
