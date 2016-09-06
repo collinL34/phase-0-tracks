@@ -18,20 +18,15 @@ while x > 0
     p 'How old are you?'
     age = gets.chomp.to_i
 
-    if age > 200
-      age = false
-    else
-      age = true
-    end
-
     p 'What year were you born?'
     year = gets.chomp.to_i
-
-    if year > 1800
-      year = false
+    
+    if (Time.now - age) == year
+        age = true
     else
-      year = true;
+        age = false
     end
+
 
     p 'Our company cafeteria serves garlic bread. Should we order some for you?'
     garlic_bread = gets.chomp
