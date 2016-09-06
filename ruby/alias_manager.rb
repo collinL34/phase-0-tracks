@@ -66,3 +66,6 @@
         end
       end
 
+# You
+# Michael
+# Michael Bravoname_array = [] name_index = 0  #get first spy name puts "Enter spy name or type quit" input = gets.chomp until input == "quit" || input == "" do    #swap first name and last name, but only if there is a space  if input.include? " "     #create array with first and last name    spy_name = input.split(' ')     #swap names     swapped_name = spy_name[1] + ' ' + spy_name[0]  else    swapped_name = input  end   #change consonants to next  next_consonant = next_item(consonants, swapped_name)    #change vowels
