@@ -5,11 +5,8 @@
 # vowels are made the next aeiou a => e
 # and so are constants d => f
 
-      def secret(user)
-          $new_versions = []
-          $old_versions = []
-        $old_versions << user
-        word = user.reverse.split('')
+def secret(name)
+        word = name.reverse.split('')
         vowels = ['a','e','i','o','u']
         constants = ['b','c','d','f','g','h','j','k','l','m','n','p','q','r','s','t','v','w','x','y','z']
           word.map! do |x|
@@ -33,39 +30,33 @@
               x = " "
             end
           end
-            $new_versions << word.join('')
+            p word.join('')
+end
 
-            counter = 0
+puts "Please give me a name, type 'quit' if done."
+  user = gets.chomp
 
-            while counter < $new_versions.length
-              old = $old_versions[counter]
-              newer = $new_versions[counter]
-                puts "#{old} is also known as #{newer}."
-                counter = counter + 1
-              end
-          end
+original = []
+original << user
+new_name = []
+new_name << secret(user)
 
-  $count = 0
-    loop do
-      puts "Please give me a name, type 'quit' if done."
-      user = gets.chomp
-      secret(user)
-      $count = $count + 1
-      if user == 'quit'
-        break
-      end
-    end
+until user == 'quit'
+  puts "Please give me a name, type 'quit' if done."
+  user = gets.chomp
+  if user == 'quit'
+    break
+  end
+  original << user
+  finished_name = secret(user)
+  new_name << finished_name
+end
 
-      if $user == 'quit'
-        $counter = 0
-        while $counter < $count
-          p $new_versions
-          p $old_versions
-          puts $old_versions[$counter] + " is also known as " + $new_versions[$counter]
-          $counter = $counter + 1
-        end
-      end
+counter = 0
 
-# You
-# Michael
-# Michael Bravoname_array = [] name_index = 0  #get first spy name puts "Enter spy name or type quit" input = gets.chomp until input == "quit" || input == "" do    #swap first name and last name, but only if there is a space  if input.include? " "     #create array with first and last name    spy_name = input.split(' ')     #swap names     swapped_name = spy_name[1] + ' ' + spy_name[0]  else    swapped_name = input  end   #change consonants to next  next_consonant = next_item(consonants, swapped_name)    #change vowels
+  while counter < original.length
+  first = original[counter]
+  second = new_name[counter]
+    puts first + ' is also known as ' + second
+  counter += 1
+  end
