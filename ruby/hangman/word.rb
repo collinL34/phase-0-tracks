@@ -9,20 +9,28 @@ class Hangman
 
   def computer_word_picker
     computer_words = ["memorandum", "vegetation", "possession", "incredible", "accessible", "chimpanzee", "mastermind", "provincial", "photograph", "confession", "particular", "conscience", "compromise", "gregarious", "litigation", "reluctance", "management", "depression", "instrument", "simplicity"]
-    computer_words[rand(20)]
+    # computer_words[rand(20)]
   end
 
   def guess_word
-    guess_words_length = computer_word_picker.length
+    @computer_word = computer_word_picker[0]
+    guess_words_length = @computer_word.length
     #create a variable that holds the string of emty characters and adds them when guessed
-    words = Array.new(guess_words_length) {'-'}
-    words.join('')
+    @words = Array.new(guess_words_length) {'-'}.join('')
+  end
+
+  def correct_guess(char)
+    if @computer_word.include?(char)
+      idx = @computer_word.index(char)
+      @words.insert(idx,char)
+    end
   end
 
 end
 
 collin = Hangman.new
 p collin.guess_word
+p collin.correct_guess(user)
 
 # puts 'Would you like to play guess the Hangman?'
 # user = gets.chomp
