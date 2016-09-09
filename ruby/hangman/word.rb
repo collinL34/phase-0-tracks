@@ -6,35 +6,50 @@
 
 class Hangman
 
+  attr_reader :guess
+  attr_reader :words
 
-  def computer_word_picker
+  def computer_guess_word
     computer_words = ["memorandum", "vegetation", "possession", "incredible", "accessible", "chimpanzee", "mastermind", "provincial", "photograph", "confession", "particular", "conscience", "compromise", "gregarious", "litigation", "reluctance", "management", "depression", "instrument", "simplicity"]
-    # computer_words[rand(20)]
+    @computer_word = computer_words[rand(20)]
+    @guess = false
   end
 
   def guess_word
-    @computer_word = computer_word_picker[0]
     guess_words_length = @computer_word.length
     #create a variable that holds the string of emty characters and adds them when guessed
-    @words = Array.new(guess_words_length) {'-'}.join('')
+    @words = Array.new(guess_words_length) {'-'}
   end
 
   def correct_guess(char)
     if @computer_word.include?(char)
       idx = @computer_word.index(char)
+      p idx
+      @word.delete_at(idx)
       @words.insert(idx,char)
+      false
+    else
+      @words
+      false
+      puts 'try again'
     end
   end
 
 end
 
-collin = Hangman.new
-p collin.guess_word
-p collin.correct_guess(user)
+game = Hangman.new
 
-# puts 'Would you like to play guess the Hangman?'
-# user = gets.chomp
+puts' getting word'
+word = game.computer_guess_word
+game.guess_word
 
-# if user == 'yes'
-#   puts 'guesss the word ' + guess_word
-# end
+while !game.guess
+  p game.words
+  puts "guess a letter, type 'done' if your done."
+  @user = gets.chomp
+  if !game.correct_guess(@user)
+  end
+  if @user == 'done'
+    game.guess = true
+  end
+end
