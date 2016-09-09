@@ -18,14 +18,17 @@ class Hangman
   def guess_word
     guess_words_length = @computer_word.length
     #create a variable that holds the string of emty characters and adds them when guessed
-    @words = Array.new(guess_words_length) {'-'}
+    @words = Array.new(guess_words_length) {'-'}.join('')
+  end
+
+  def guess_word_idx(guess_char)
+    idx = []
+    @Words.scan
   end
 
   def correct_guess(char)
     if @computer_word.include?(char)
       idx = @computer_word.index(char)
-      p idx
-      @word.delete_at(idx)
       @words.insert(idx,char)
       false
     else
