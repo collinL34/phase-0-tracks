@@ -13,7 +13,6 @@ class Hangman
     @guess
   end
 
-
   def finder(char)
     @character = char
     guess = ['l','o','o','s','e']
@@ -29,9 +28,10 @@ class Hangman
 end
 
   def adder(arg)
-  @guess.split('').delete_at(arg)
-  @guess.insert(arg,@character)
-end
+    @guess.insert(arg,@character)
+    @guess.chop!
+    @guess
+  end
 
 end
 
@@ -39,12 +39,11 @@ game = Hangman.new
 
 puts 'please give me a word'
 user = gets.chomp
-game.word(user['loose'])
+guess_word = game.word(user)
+word_length = guess_word.length
 
-puts "Here is your blank word #{@guess}, give me a letter"
-letter = gets.chomp
-game.finder(letter)
-
-  puts "give me another letter please. #{@guess}"
+word_length.times do
+  puts "Here is your blank word #{guess_word}, give me a letter"
   letter = gets.chomp
-  game.finder(letter)
+  guess_word = game.finder(letter)
+end
