@@ -5,42 +5,46 @@
 
 class Hangman
 
-  attr_reader :player1
-  attr_reader :player2_word
+  attr_accessor :guess
 
-  def user_word(word) #loose
-    @guess_word = word.split('')
-    @player2_word = Array.new(word.length) {'-'}
-    return @guess_word
+  def word(word)
+    @guess_word = word
+    @guess = Array.new(word.length) {'-'}.join('')
+    @guess
   end
 
-  def guess(char) #l
-    @guess_word.each do |letter|
+
+  def finder(char)
+    @character = char
+    guess = ['l','o','o','s','e']
+    counter = 0
+    while counter < guess.length
+      letter = guess[counter]
       if letter == char
-        idx = @guess_word.index(letter)
-        @player2_word.delete_at(idx)
-        @player2_word.insert(idx,letter)
-      else
-        @player2_word
+        result = adder(counter)
       end
+      counter += 1
     end
-  end
+  p result
+end
+
+  def adder(arg)
+  @guess.split('').delete_at(arg)
+  @guess.insert(arg,@character)
+end
 
 end
 
 game = Hangman.new
 
-puts 'player 1 type the word'
-player1 = gets.chomp #loose
-word_to_guess = game.user_word(player1)
+puts 'please give me a word'
+user = gets.chomp
+game.word(user['loose'])
 
-puts "Player2 guess a letter, with no spaces or capitalizations.  #{@player2_word}"
-  player2 = gets.chomp #l
-  p game.guess(player2)
+puts "Here is your blank word #{@guess}, give me a letter"
+letter = gets.chomp
+game.finder(letter)
 
-until @player2_word == word_to_guess || player2 == 'done' do
-  puts "Player2 guess a letter, with no spaces or capitalizations. #{@player2_word}"
-  player2 = gets.chomp
-  game.guess(player2)
-  p @player2_word
-end
+  puts "give me another letter please. #{@guess}"
+  letter = gets.chomp
+  game.finder(letter)
