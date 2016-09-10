@@ -8,20 +8,22 @@ class Hangman
   attr_reader :player1
   attr_reader :player2_word
 
-  def user_word(word)
+  def user_word(word) #loose
     @guess_word = word.split('')
     @player2_word = Array.new(word.length) {'-'}
+    return @guess_word
   end
 
-  def guess(char)
-    @guess_word.map! do |letter|
-      if letter == 'char'
-        idx = @player1.index(letter)
-        @player2_word.slice(idx, idx + 1)
+  def guess(char) #l
+    @guess_word.each do |letter|
+      if letter == char
+        idx = @guess_word.index(letter)
+        @player2_word.delete_at(idx)
         @player2_word.insert(idx,letter)
+      else
+        @player2_word
       end
     end
-    @player2_word
   end
 
 end
@@ -29,10 +31,16 @@ end
 game = Hangman.new
 
 puts 'player 1 type the word'
-@player1 = gets.chomp
-guess_word = game.user_word(@player1)
+player1 = gets.chomp #loose
+word_to_guess = game.user_word(player1)
 
-puts "Player2 guess a letter, with no spaces or capitalizations. " + guess_word.join('')
-player2 = gets.chomp
+puts "Player2 guess a letter, with no spaces or capitalizations.  #{@player2_word}"
+  player2 = gets.chomp #l
+  p game.guess(player2)
 
-p game.guess(player2)
+until @player2_word == word_to_guess || player2 == 'done' do
+  puts "Player2 guess a letter, with no spaces or capitalizations. #{@player2_word}"
+  player2 = gets.chomp
+  game.guess(player2)
+  p @player2_word
+end
