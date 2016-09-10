@@ -5,30 +5,34 @@
 
 class Hangman
 
-  attr_reader :guess
-  attr_reader :words
+  attr_reader :player1
+  attr_reader :player2_word
 
-  def guess_word
-    guess_words_length = @computer_word.length
-    #create a variable that holds the string of emty characters and adds them when guessed
-    @words = Array.new(guess_words_length) {'-'}.join('')
+  def user_word(word)
+    @guess_word = word.split('')
+    @player2_word = Array.new(word.length) {'-'}
+  end
+
+  def guess(char)
+    @guess_word.map! do |letter|
+      if letter == 'char'
+        idx = @player1.index(letter)
+        @player2_word.slice(idx, idx + 1)
+        @player2_word.insert(idx,letter)
+      end
+    end
+    @player2_word
   end
 
 end
 
 game = Hangman.new
 
-puts' getting word'
-word = game.computer_guess_word
-game.guess_word
+puts 'player 1 type the word'
+@player1 = gets.chomp
+guess_word = game.user_word(@player1)
 
-while !game.guess
-  p game.words
-  puts "guess a letter, type 'done' if your done."
-  @user = gets.chomp
-  if !game.correct_guess(@user)
-  end
-  if @user == 'done'
-    game.guess = true
-  end
-end
+puts "Player2 guess a letter, with no spaces or capitalizations. " + guess_word.join('')
+player2 = gets.chomp
+
+p game.guess(player2)
