@@ -6,11 +6,12 @@
 class Hangman
 
   attr_accessor :guess
+  attr_accessor :guess_word
 
   def word(word)
     @guess_word = word #'loose'
     @guess = Array.new(word.length) {'-'}.join('')
-    @guess_word
+    @guess
   end
 
   def finder(char) #o
@@ -39,18 +40,18 @@ game = Hangman.new
 
 puts 'please give me a word'
 user = gets.chomp #loose
-word_to_guess = game.word(user)
-word_length = word_to_guess.length
+game.word(user)
+word_length = game.guess_word.length
 
 word_length.times do
-  puts "Here is your blank word #{word_to_guess}, give me a letter"
+  puts "Here is your blank word #{game.guess_word}, give me a letter"
   letter = gets.chomp #o
 
-  if word_to_guess.include?(letter)
+  if game.guess_word.include?(letter)
     guess_word = game.finder(letter) #o
-    if letter == word_to_guess
+    if letter == game.guess_word
       puts 'Congrats you did it!'
-      game.guess = word_to_guess
+      game.guess = game.guess_word
       break
     end
   elsif letter == 'done'
@@ -60,13 +61,13 @@ word_length.times do
     puts 'Try again'
   end
 
-  if game.guess == word_to_guess
+  if game.guess == game.guess_word
     puts 'Congrats you did it!'
     break
   end
 
 end
 
-  if game.guess != word_to_guess
+  if game.guess != game.guess_word
     puts 'Sorry you lost try again.'
   end

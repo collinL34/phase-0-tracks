@@ -1,15 +1,13 @@
-
+#our class should keep prompting the user for a letter
+#until the have either guesssed the word or entered all the letters
+#then send a message to user wether they succeeded or failed
 
 require_relative 'word'
 
 describe Hangman do
   let(:play) {Hangman.new}
 
-    it "picks the word the user is suppposed to guess" do
-      expect(play.computer_word_picker).to eq ["memorandum", "vegetation", "possession", "incredible", "accessible", "chimpanzee", "mastermind", "provincial", "photograph", "confession", "particular", "conscience", "compromise", "gregarious", "litigation", "reluctance", "management", "depression", "instrument", "simplicity"]
-    end
+  it 'takes in a string and returns a string of symbols that equal a letter in the word pasesed into the method'
+  e
 
-    it "creates a string that' length is the same as the word to be guessed's length" do
-    expect(play.guess_word).to eq '-'
-  end
 end
