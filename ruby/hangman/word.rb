@@ -36,38 +36,38 @@ end
 
 end
 
-game = Hangman.new
+# game = Hangman.new
 
-puts 'please give me a word'
-user = gets.chomp #loose
-game.word(user)
-word_length = game.guess_word.length
+# puts 'please give me a word'
+# user = gets.chomp #loose
+# game.word(user)
+# word_length = game.guess_word.length
 
-word_length.times do
-  puts "Here is your blank word #{game.guess_word}, give me a letter"
-  letter = gets.chomp #o
+# word_length.times do
+#   puts "Here is your blank word #{game.guess_word}, give me a letter"
+#   letter = gets.chomp
 
-  if game.guess_word.include?(letter)
-    guess_word = game.finder(letter) #o
-    if letter == game.guess_word
-      puts 'Congrats you did it!'
-      game.guess = game.guess_word
-      break
-    end
-  elsif letter == 'done'
-    puts 'Quitter'
-    break
-  else
-    puts 'Try again'
-  end
+#   if game.guess_word.include?(letter)
+#     guess_word = game.finder(letter) #o
+#     if letter == game.guess_word
+#       puts 'Congrats you did it!'
+#       game.guess = game.guess_word
+#       break
+#     end
+#   elsif letter == 'done'
+#     puts 'Quitter'
+#     break
+#   else
+#     puts 'Try again'
+#   end
 
-  if game.guess == game.guess_word
-    puts 'Congrats you did it!'
-    break
-  end
+#   if game.guess == game.guess_word
+#     puts 'Congrats you did it!'
+#     break
+#   end
 
-end
+# end
 
-  if game.guess != game.guess_word
-    puts 'Sorry you lost try again.'
-  end
+#   if game.guess != game.guess_word
+#     puts 'Sorry you lost try again.'
+#   end
