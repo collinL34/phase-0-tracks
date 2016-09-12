@@ -22,7 +22,7 @@ function matchFinder(object1,object2) {
           console.log(true);
         } else {
           console.log(false);
-        }
+        };
       }
     };
 };
