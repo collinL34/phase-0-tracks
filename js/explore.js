@@ -26,4 +26,11 @@ function string(strings) {
 };
 reverseString.push(string('hello'));
 
-if
+if (patricJane == 'the mentalist') {
+  console.log('cool i want to be a pyschic');
+}
+else {
+  console.log('or maybe i should stay in school');
+};
+
+patricJane = 'the mentalist';
