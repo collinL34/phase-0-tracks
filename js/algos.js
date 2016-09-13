@@ -30,10 +30,13 @@ function matchFinder(object1,object2) {
 function randomWord(integer) {
   var randomString = '';
   var alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
-  var counter = Math.floor(Math.random() * alphabet.length)
-  console.log(counter);
-  randomString += alphabet[counter];
-  console.log(randomString);
+  var counter = 0
+  while (counter < integer) {
+    var idx = Math.floor(Math.random() * alphabet.length)
+    randomString += alphabet[idx];
+    console.log(randomString);
+    counter += 1
+  };
 }
 
 randomWord(3)
