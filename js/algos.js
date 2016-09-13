@@ -27,6 +27,23 @@ function matchFinder(object1,object2) {
     };
 };
 
+function randomWord(integer) {
+  var randomString = '';
+  var alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+  var counter = Math.floor(Math.random() * alphabet.length)
+  console.log(counter);
+  randomString += alphabet[counter];
+  console.log(randomString);
+}
+
+randomWord(3)
+
+
+
+
+
+
+
 var third = {name: 'collin', age: 21}
 var fourth = {name: 'collin', age: 21}
 var first = {name: "Steven", age: 54};
