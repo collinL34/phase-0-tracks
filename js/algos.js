@@ -27,6 +27,8 @@ function matchFinder(object1,object2) {
     };
 };
 
+var array = []
+
 function randomWord(integer) {
   var randomString = '';
   var alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
@@ -37,15 +39,22 @@ function randomWord(integer) {
     console.log(randomString);
     counter += 1
   };
+  array.push(randomString);
+  console.log(array);
 }
 
 randomWord(3)
+randomWord(10)
 
+var i = 0
 
+do{
+  randomWord(Math.floor(Math.random() * 10))
+  i++;
+}
+while (i <= 10);
 
-
-
-
+console.log(longestWord(array));
 
 var third = {name: 'collin', age: 21}
 var fourth = {name: 'collin', age: 21}
