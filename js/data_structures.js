@@ -17,3 +17,18 @@ function hashAdder(array1,array2) {
 
 hashAdder(colorArray,colors);
 console.log(hash);
+
+function carCreator(color,model,doorCount) {
+  this.color = color;
+  this.model = model;
+  this.doorCount = doorCount;
+  console.log('This is your new car ' + this.model);
+};
+
+carCreator('red','Crossfire',2);
+
+function goFast(model) {
+  console.log(model + ' is going 60 thats really fast!');
+};
+
+goFast('crossfire');
