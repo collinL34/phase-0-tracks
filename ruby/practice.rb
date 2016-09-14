@@ -18,6 +18,7 @@ begin i > 5
   p i
   i += 2
 end while i < 25
+<<<<<<< HEAD
 puts i
 
 i = 0
@@ -28,3 +29,6 @@ begin i < 10
   i += 2
   p i
 end
+=======
+puts i
+>>>>>>> master

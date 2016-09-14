@@ -1,0 +1,11 @@
+1. Classes are objects with their own built in methods to be called upon by the instances of that class. These classes all have instance variables that can be changed and usually modified depending on the class like in the santa challenge an instance variable is like the ethnicity wether the instance is black or white or asian and so on. The same goes for the instance methods they are a certain instance of results that are returned and determined by the info that is passed into them by the instance of the class and they are also only accessible by instances of that very class. The behavior of a class are the abilities it can do like the behavior of an instance of a class is like how it moves or does. The state is the info or details of each instance of the class like if its a person class it’ll be the height age name and so on
+
+2.Attributes are variables for a class that describe the characteristics of the instance of the class.
+
+3. I don’t know about this being a real world example but…….. if we wanted to create a pokemon class we could have an attribute about what type of pokemon will it be like electric or fire or water etc. then its hp level and you an update that when it gets stronger or just if you want to i mean if you wanna be like that haha. 
+
+4. The purpose of the initialize method is to have it have set attributes for every instance of the class so that every time you create an instance these attributes will always be run and you can also have it say something every time you create the instance like the name of the instance if you want.
+
+5.A module is a set method for a class that you can always call upon for instances of that class for when you don’t want to write the same method over again. 
+
+6.You can use a module to have set values for the same bits of data for your instances like if you want to set all their features like hair color,ethnicity or if you want to do some math and you want to make sure you use the same equation through your program you use a module for your class. 
