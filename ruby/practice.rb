@@ -48,7 +48,7 @@ hash = {
 
 
 def calculator(num1,sym,num2)
-  return num1 sym.to_sym num2
+  eval("#{num1} #{sym} #{num2}")
 end
 
-calculator()
+puts calculator(3,'+',7)
