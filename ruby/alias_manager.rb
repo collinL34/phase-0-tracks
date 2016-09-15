@@ -17,7 +17,7 @@ def name_split(name)
       x = " "
     end
   end
-  p word.join('')
+  @names_hash.store(name,word)
  end
 
 def is_vowels(char)
@@ -32,10 +32,18 @@ def is_constants(char)
   return @constants.include?(char)
 end
 
-puts "Please give me a name, type 'quit' if done."
-  user = gets.chomp
-  name_split(user)
+@names_hash = {}
 
+until @user == 'quit'
+  puts "Please give me a name, type 'quit' if done."
+    @user = gets.chomp
+    name_split(@user) unless @user == 'quit'
+    if @user == 'quit'
+      @names_hash.each do |first_name, new_name|
+        puts "#{first_name} is also known as #{new_name}."
+      end
+    end
+end
 
 # original = []
 # original << user
