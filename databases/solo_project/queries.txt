@@ -1,0 +1,8 @@
+1. select * from car_model;
+1|gt350|2016|1
+2|gt|2017|1
+3|458 Italia|2016|3
+4|F12 Berlinetta|2016|3
+5|Camaro ss|2016|2
+6|SLS AMG Black Series|2014|4
+2.
