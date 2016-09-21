@@ -51,7 +51,24 @@ sqlite>
 4|Mercedes Benz|5|SLS AMG black series|2014|Gt|4
 sqlite>
  7. 
+ select manufacturer, model
+   ...> from car_manufacturer
+   ...> inner join model
+   ...> on car_manufacturer.manufacturer=model.model;
+sqlite>
+8. 
+select model,manufacturer
+   ...> from model
+   ...> join car_manufacturer
+   ...> on model.model= car_manufacturer.manufacturer;
+sqlite>
 
+9.
+ select manf_id,manufacturer
+   ...> from model
+   ...> join car_manufacturer
+   ...> on model.manf_id= car_manufacturer.manufacturer;
+sqlite>
 
 
 
