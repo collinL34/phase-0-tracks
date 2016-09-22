@@ -21,7 +21,14 @@ db.execute(create_table)
 # db.execute("insert into kitten (name,age) values ('mr mittens',2)")
 kittens = db.execute("select * from kitten")
 puts kittens.class
-# puts kittens
+
+def kitten_explosion(db,name,age)
+  db.execute("insert into kitten (name,age) values (?,?)",[name,age])
+end
+
+20.times do
+  kitten_explosion(db,Faker::Name.name,2)
+end
 
 kittens.each do |kitten|
   puts "#{kitten[1]} is #{kitten[2]}."
