@@ -35,13 +35,3 @@ kittens.each do |kitten|
 end
 
 #create a test
-
-
-
-SELECT *
-FROM user
-JOIN reviews
-ON reviews.user_id = user.id
-JOIN business
-ON business.id = reviews.business_id
-WHERE business.id= 1;
