@@ -18,5 +18,13 @@ create_table = <<-SQL
 SQL
 
 db.execute(create_table)
-db.execute("insert into kitten (name,age) values ('mr mittens',2)")
+# db.execute("insert into kitten (name,age) values ('mr mittens',2)")
+kittens = db.execute("select * from kitten")
+puts kittens.class
+# puts kittens
+
+kittens.each do |kitten|
+  puts "#{kitten[1]} is #{kitten[2]}."
+end
+
 #create a test
