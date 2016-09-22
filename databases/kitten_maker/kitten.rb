@@ -38,10 +38,10 @@ end
 
 
 
-SELECT user.first_name, user.last_name, reviews.stars,reviews.comment, business.name
+SELECT *
 FROM user
 JOIN reviews
 ON reviews.user_id = user.id
 JOIN business
 ON business.id = reviews.business_id
-WHERE business.id=reviews.business_id;
+WHERE business.id= 1;
