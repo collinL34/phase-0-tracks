@@ -1,0 +1,12 @@
+ 2.
+SELECT user.first_name, user.last_name, reviews.stars,reviews.comment, business.name
+   ...> FROM user
+   ...> JOIN reviews
+   ...> ON reviews.user_id = user.id
+   ...> JOIN business
+   ...> ON business.id = reviews.business_id
+   ...> WHERE business.id=reviews.business_id;
+Bradford| pit|2|great food|Grundy Hollow Wedding
+collin|shelby|4|amazing service|Amirs Towing
+collin|shelby|1|cruddy food|Grundy Hollow Wedding
+sqlite>
