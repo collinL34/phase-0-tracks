@@ -25,8 +25,24 @@ db.execute(create_list)
 
 # add items to lists
 # db.execute("insert into models (model,submodels,years,engine) values ('gt350','R',1966-2016,302)")
-db.execute("insert into models (model,submodels,years,engine) values ('Falcon','ranchero/sprint/squire/futura/wagon',1960-1970,302/260/289/351)")
-db.execute("insert into models (model,submodels,years,engine) values ('chevelle','ss',1964-1973,350/454/327)")
-db.execute("insert into models (model,submodels,years,engine) values ('250 GTO','N/A',1962-1964,3.0)")
-db.execute("insert into models (model,submodels,years,engine) values ('crossfire','srt6',2004-2008,3.2)")
-#
+# db.execute("insert into models (model,submodels,years,engine) values ('Falcon','ranchero/sprint/squire/futura/wagon',1960-1970,302/260/289/351)")
+# db.execute("insert into models (model,submodels,years,engine) values ('chevelle','ss',1964-1973,350/454/327)")
+# db.execute("insert into models (model,submodels,years,engine) values ('250 GTO','N/A',1962-1964,3.0)")
+# db.execute("insert into models (model,submodels,years,engine) values ('crossfire','srt6',2004-2008,3.2)")
+
+# create a manf list
+create_list = <<-sql
+  create table if not exists manf (
+    id integer primary key,
+    name varchar(255)
+  );
+sql
+
+# execute the table
+
+db.execute(create_list)
+
+db.execute("insert into manf (name) values ('Mercedes Benz')")
+db.execute("insert into manf (name) values ('Ferrari')")
+db.execute("insert into manf (name) values ('Ford')")
+db.execute("insert into manf (name) values ('Chevrolet')")
