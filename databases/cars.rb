@@ -61,3 +61,9 @@ p models
 # select from manf
 manufactures = db.execute('select * from manf')
 p manufactures
+
+# ask the user if they want to do something to the tables
+puts 'Would you like to do something to the tables? Please type correctly.'
+user = gets.chomp
+
+db.execute(user) unless user == ''
