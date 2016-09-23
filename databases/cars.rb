@@ -16,7 +16,9 @@ create_list = <<-SQL
     model varchar(255),
     submodels varchar(255),
     years int,
-    engine int
+    engine int,
+    manf_id int,
+    foreign key (manf_id) references manf(id)
   );
 SQL
 
@@ -24,25 +26,30 @@ SQL
 db.execute(create_list)
 
 # add items to lists
-# db.execute("insert into models (model,submodels,years,engine) values ('gt350','R',1966-2016,302)")
-# db.execute("insert into models (model,submodels,years,engine) values ('Falcon','ranchero/sprint/squire/futura/wagon',1960-1970,302/260/289/351)")
-# db.execute("insert into models (model,submodels,years,engine) values ('chevelle','ss',1964-1973,350/454/327)")
-# db.execute("insert into models (model,submodels,years,engine) values ('250 GTO','N/A',1962-1964,3.0)")
-# db.execute("insert into models (model,submodels,years,engine) values ('crossfire','srt6',2004-2008,3.2)")
+# db.execute("insert into models (model,submodels,years,engine, manf_id) values ('gt350','R',1966-2016,302,3)")
+# db.execute("insert into models (model,submodels,years,engine, manf_id) values ('Falcon','ranchero/sprint/squire/futura/wagon',1960-1970,302/260/289/351,3)")
+# db.execute("insert into models (model,submodels,years,engine, manf_id) values ('chevelle','ss',1964-1973,350/454/327,4)")
+# db.execute("insert into models (model,submodels,years,engine, manf_id) values ('250 GTO','N/A',1962-1964,3.0,2)")
+# db.execute("insert into models (model,submodels,years,engine, manf_id) values ('crossfire','srt6',2004-2008,3.2,5)")
 
 # create a manf list
-create_list = <<-sql
+create_list = <<-SQL
   create table if not exists manf (
     id integer primary key,
     name varchar(255)
   );
-sql
+SQL
 
 # execute the table
 
 db.execute(create_list)
 
-db.execute("insert into manf (name) values ('Mercedes Benz')")
-db.execute("insert into manf (name) values ('Ferrari')")
-db.execute("insert into manf (name) values ('Ford')")
-db.execute("insert into manf (name) values ('Chevrolet')")
+# db.execute("insert into manf (name) values ('Mercedes Benz')")
+# db.execute("insert into manf (name) values ('Ferrari')")
+# db.execute("insert into manf (name) values ('Ford')")
+# db.execute("insert into manf (name) values ('Chevrolet')")
+# db.execute("insert into manf (name) values ('chrysler')")
+
+# join the tables with thier corresponding model/manf
+
+db.execute('select * from models, manf where manf.id = models.manf_id')
