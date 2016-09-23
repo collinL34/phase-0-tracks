@@ -41,8 +41,81 @@ create_list = <<-SQL
     name varchar(255)
   );
 SQL
-
 db.execute(create_list)
+
+  # create_table = <<-SQL
+  #   create table if not exists chrysler (
+  #     id integer primary key,
+  #     model varchar(255),
+  #     submodel varchar(255),
+  #     year int,
+  #     engine int,
+  #     manf_id int,
+  #     foreign key (manf_id) references manf(id)
+  #   );
+  # SQL
+  # db.execute(create_table)
+  # db.execute("insert into chrysler select * from models where models.manf_id=5")
+
+
+ # create_table = <<-SQL
+ #    create table if not exists Ferrari (
+ #      id integer primary key,
+ #      model varchar(255),
+ #      submodel varchar(255),
+ #      year int,
+ #      engine int,
+ #      manf_id int,
+ #      foreign key (manf_id) references manf(id)
+ #    );
+ #  SQL
+ #  db.execute(create_table)
+ #  db.execute("insert into Ferrari select * from models where models.manf_id=2")
+
+
+ # create_table = <<-SQL
+ #    create table if not exists Chevrolet (
+ #      id integer primary key,
+ #      model varchar(255),
+ #      submodel varchar(255),
+ #      year int,
+ #      engine int,
+ #      manf_id int,
+ #      foreign key (manf_id) references manf(id)
+ #    );
+ #  SQL
+ #  db.execute(create_table)
+ #  db.execute("insert into Chevrolet select * from models where models.manf_id=4")
+
+
+ # create_table = <<-SQL
+ #    create table if not exists Mercedes_Benz (
+ #      id integer primary key,
+ #      model varchar(255),
+ #      submodel varchar(255),
+ #      year int,
+ #      engine int,
+ #      manf_id int,
+ #      foreign key (manf_id) references manf(id)
+ #    );
+ #  SQL
+ #  db.execute(create_table)
+ #  db.execute("insert into Mercedes_Benz select * from models where models.manf_id=1")
+
+  # create_table = <<-SQL
+  #   create table if not exists Lamborghini (
+  #     id integer primary key,
+  #     model varchar(255),
+  #     submodel varchar(255),
+  #     year int,
+  #     engine int,
+  #     manf_id int,
+  #     foreign key (manf_id) references manf(id)
+  #   );
+  # SQL
+  # db.execute(create_table)
+  # db.execute("insert into Lamborghini select * from models where models.manf_id=6")
+
 
 # db.execute("insert into manf (name) values ('Mercedes Benz')")
 # db.execute("insert into manf (name) values ('Ferrari')")
@@ -51,16 +124,14 @@ db.execute(create_list)
 # db.execute("insert into manf (name) values ('chrysler')")
 
 # join the tables with thier corresponding model/manf
-manf = db.execute("select * from manf, models where manf.id = models.manf_id")
-p manf
 
 # select from models
-models = db.execute('select * from models')
-p models
+# models = db.execute('select * from models')
+# p models
 
 # select from manf
-manufactures = db.execute('select * from manf')
-p manufactures
+# manufactures = db.execute('select * from manf')
+# p manufactures
 
 # ask the user if they want to do something to the tables
 puts 'Would you like to do something to the tables? Please type correctly.'
