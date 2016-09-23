@@ -31,16 +31,16 @@ db.execute(create_list)
 # db.execute("insert into models (model,submodels,years,engine, manf_id) values ('chevelle','ss',1964-1973,350/454/327,4)")
 # db.execute("insert into models (model,submodels,years,engine, manf_id) values ('250 GTO','N/A',1962-1964,3.0,2)")
 # db.execute("insert into models (model,submodels,years,engine, manf_id) values ('crossfire','srt6',2004-2008,3.2,5)")
+# db.execute("insert into models (model,submodels,years,engine, manf_id) values ('300sl','N/A',1954-1963,2996,1)")
 
-# create a manf list
+# join the manf and the models together in a variable
+
 create_list = <<-SQL
   create table if not exists manf (
     id integer primary key,
     name varchar(255)
   );
 SQL
-
-# execute the table
 
 db.execute(create_list)
 
@@ -51,3 +51,5 @@ db.execute(create_list)
 # db.execute("insert into manf (name) values ('chrysler')")
 
 # join the tables with thier corresponding model/manf
+manf = db.execute("select * from manf, models where manf.id = models.manf_id")
+p manf
