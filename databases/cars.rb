@@ -53,3 +53,11 @@ db.execute(create_list)
 # join the tables with thier corresponding model/manf
 manf = db.execute("select * from manf, models where manf.id = models.manf_id")
 p manf
+
+# select from models
+models = db.execute('select * from models')
+p models
+
+# select from manf
+manufactures = db.execute('select * from manf')
+p manufactures
