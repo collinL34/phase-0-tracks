@@ -51,5 +51,3 @@ db.execute(create_list)
 # db.execute("insert into manf (name) values ('chrysler')")
 
 # join the tables with thier corresponding model/manf
-
-db.execute('select * from models, manf where manf.id = models.manf_id')
