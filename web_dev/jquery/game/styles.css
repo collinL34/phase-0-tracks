@@ -55,8 +55,3 @@ section {
 .button:hover {
   background-color: blue;
 }
-
-#info {
-  padding-bottom: 200px;
-  padding-top: 0px;
-}
