@@ -2,8 +2,26 @@
 <html>
 <head>
   <title>html practice page</title>
+  <script type="text/javascript"></script>
 </head>
 <body>
+  <script src="https://code.jquery.com/jquery-2.1.1.js"></script>
+  <script>
+    $('body').text('hello?');
+    userAsk = confirm('Would you like to chgange the styling of your page?');
+    if (userAsk === true) {
+      text = prompt('would you like to type something in the page?');
+      if (text === true) {
+        change = prompt('')
+      }
+      user = prompt('what tage would you like to change');
+      change = prompt('what would you like to change?');
+      bcColor = prompt('What color would you like have the background be?');
+    } else {
+      confirm('okay be lame like that.');
+    };
+    $(user).css(change,bcColor);
+  </script>
   <h1>'hello world im awesome!'</h1>
   <p>this is my practice paragraph and in it iam pretty much just going to type out my day plan because thats all i can really think of right now. So, first i woke up and took a shower then dried my hair and brushed my teeth. Then i got on coyote and started the new asssignments for this week. THne im going to eat and study till my gps later today then after that it will be dinenr time and i will then after that do my first peer pairing session screenhero then i will grab a quick beer and watch some tv or maybe keep studying i cant decide which. So yeah thanks for listening to my day plans.</p>
   <strong>this is some really strong text man</strong>
