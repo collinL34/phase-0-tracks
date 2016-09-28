@@ -9,7 +9,7 @@ html {
 
 section {
   padding-left: 600px;
-  padding-top: 300px
+  padding-top: 200px
 }
 
 .button {
@@ -55,7 +55,12 @@ section {
 .button:hover {
   background-color: blue;
 }
+
 .link {
+  padding-left: 200px;
+}
+
+.link button {
   display: inline-block;
   border-radius: 10px;
   background-color: #f4511e;
@@ -64,20 +69,20 @@ section {
   text-align: center;
   font-size: 28px;
   padding: 10px;
-  width: 150px;
+  width: 170px;
   transition: all 0.5s;
   cursor: pointer;
   margin: 5px;
 }
 
-.link span {
+.link button span {
   cursor: pointer;
   display: inline-block;
   position: relative;
   transition: 0.5s;
 }
 
-.link span:after {
+.link button span:after {
   content: ">";
   position: absolute;
   opacity: 0;
@@ -86,15 +91,15 @@ section {
   transition: 0.5s;
 }
 
-.link:hover span {
+.link button:hover span {
   padding-right: 25px;
 }
 
-.link:hover span:after {
+.link button:hover span:after {
   opacity: 1;
   right: 0;
 }
 
-.link:hover {
+.link button:hover {
   background-color: blue;
 }
