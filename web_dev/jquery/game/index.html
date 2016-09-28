@@ -7,24 +7,24 @@
   <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 
-<body>
+  <body>
 
-  <div>
-    <script>
-      $.getScript("deadpool.js", function(){
-       alert("Script loaded and executed.");
-      });
-    </script>
-  </div>
+    <section class='section'>
+      <button class="button" style="vertical-align:middle" onClick="history.go(0)"><span>Push Me!</span></button>
+    </section>
 
-  <section>
-    <button class="button" style="vertical-align:middle" onClick="history.go(0)"><span>Push Me!</span></button>
-  </section>
+    <div class='link'>
+      <a href="https://en.wikipedia.org/wiki/Deadpool"><button class='link'><span>deadpools info!</span></button></a>
+    </div>
 
-  <div>
-    <a href="https://en.wikipedia.org/wiki/Deadpool"><button class='button'><span>deadpools info!</span></button></a>
-  </div>
+    <div>
+      <script>
+        $.getScript("deadpool.js", function(){
+         alert("Script loaded and executed.");
+        });
+      </script>
+    </div>
 
-</body>
+  </body>
 
 </html>
