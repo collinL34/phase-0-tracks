@@ -45,11 +45,22 @@ get '/students/:id' do
   student.to_s
 end
 
-get '/contact/:address' do
-  address = params[:address]
-  "#{address} is where pete you can contact me."
+get '/contact' do
+  "45 Fakeith ave, Berkeley CA 94707"
 end
 
-get '/great_job' do
+get '/great_job/' do
+  name = params[:name]
+  if name
+  "Good job #{name}!"
+  else
+    "Good job!"
+  end
+end
 
+get '/math/:number1/:number2' do
+  num1 = params[:number1].to_i
+  num2 = params[:number2].to_i
+  result = num1 + num2
+  "<p>'#{result}'</p>"
 end
