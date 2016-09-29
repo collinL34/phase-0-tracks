@@ -64,3 +64,16 @@ get '/math/:number1/:number2' do
   result = num1 + num2
   "<p>equation you've chosen: #{num1} + #{num2} =  #{result}</p>"
 end
+
+get '/schools/' do
+  school = params[:school]
+  students = db.execute("select * from students where campus='SF'");
+  response = ''
+  students.each do |student|
+    response << "ID: #{student['id']}<br>"
+    response << "Name: #{student['name']}<br>"
+    response << "Age: #{student['age']}<br>"
+    response << "Campus: #{student['campus']}<br><br>"
+  end
+  response
+end
