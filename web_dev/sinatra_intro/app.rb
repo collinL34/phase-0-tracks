@@ -67,7 +67,7 @@ end
 
 get '/schools/' do
   school = params[:school]
-  students = db.execute("select * from students where campus='SF'");
+  students = db.execute("select * from students where campus='#{school}'");
   response = ''
   students.each do |student|
     response << "ID: #{student['id']}<br>"
