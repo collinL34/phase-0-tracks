@@ -77,3 +77,17 @@ get '/schools/' do
   end
   response
 end
+
+get '/column/:column_name/:value' do
+  column = params[:column_name]
+  value = params[:value]
+  students = db.execute("select * from students where #{column}='#{value}'");
+  response = ''
+  students.each do |student|
+    response << "ID: #{student['id']}<br>"
+    response << "Name: #{student['name']}<br>"
+    response << "Age: #{student['age']}<br>"
+    response << "Campus: #{student['campus']}<br>"
+  end
+  response
+end
