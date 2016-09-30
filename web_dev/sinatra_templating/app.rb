@@ -28,7 +28,7 @@ end
 
 get '/housing' do
   @room_mates = []
-  idx = 0
+  idx = 1
   4.times do |student|
   students = db.execute("select * from students where id=#{idx}")
   @room_mates << students
