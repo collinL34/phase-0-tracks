@@ -91,3 +91,6 @@ get '/column/:column_name/:value' do
   end
   response
 end
+
+students = db.execute('select * from students')
+p students.sort
